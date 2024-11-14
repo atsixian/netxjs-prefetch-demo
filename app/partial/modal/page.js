@@ -4,7 +4,9 @@ export default function FullPrefetchModalPage() {
     <div style={{ height: "100%", display: "grid", placeItems: "center", fontSize: 36 }}>
       <div>
         <h1>Partial prefetch when intercepting</h1>
-        <Link href="/posts/1">/posts/1</Link>
+        {Array.from({ length: 100 }).map((_, i) => (
+          <Link href={`/posts/${i}`}>/posts/{i}</Link>
+        ))}
       </div>
     </div>
   );
